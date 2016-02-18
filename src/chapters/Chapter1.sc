@@ -64,31 +64,60 @@ print ("Exercise 2. In the Scala REPL, compute the square root of 3,\n" +
   "and then square that value. By how much does\n" +
   "the result differ from 3? (Hint: The res variables are your friend.")
 pow(sqrt(3), 2)
-
 print ("Exercise 3. Are the res variables val or var?")
 print ("Exercise 4. Scala lets you multiply a string with a number—\n" +
   "try out \"crazy\" * 3 in the REPL. What does this operation do?" +
   "Where can you find it in Scaladoc?")
-
 "crazy" * 3
 print ("Exercise 5. What does 10 max 2 mean? In which class is the max\n" +
   "method defined?")
 
 print ("Exercise 6. Using BigInt, compute 2 to the power of 1024.")
 //BigInt(pow(2, 1024))
-
 print ("Exercise 7. What do you need to import so that you can get a\n" +
   "random prime as probablePrime(100, Random), without any qualifiers\n" +
   "before probablePrime and Random?")
-
 print ("Exercise 8. One way to create random file or directory names is\n" +
   "to produce a random BigInt and convert it to base 36, yielding a string\n" +
   "such as \"qsnvbevtomcj38o06kul\". Poke around Scaladoc to find a way of\n" +
   "doing this in Scala.")
-
 print ("Exercise 9. How do you get the first character of a string in Scala?\n" +
   "The last character?")
-
 print ("Exercise 10. What do the take, drop, takeRight, and dropRight string\n" +
   "functions do? What advantage or disadvantage do they have over using substring?")
 
+
+
+
+
+/*
+addExercise(10,
+  "What do the take, drop, takeRight, and dropRight string" +
+  "functions do? What advantage or disadvantage do they have over using substring?"
+)
+
+
+def addExercise(number: Int, exDef: String) = {
+  val maxLineCharSize = 60
+  var exDefinition = "Exercice " + number + ". " + exDef
+  var totalSize = exDefinition.length
+  var charPointer: Int = maxLineCharSize - 1
+  var currentChar = exDefinition.charAt(charPointer)
+
+
+  def test(str: String) = new Array[] = {
+
+    while (! currentChar.equals(' ')) {
+    charPointer -= 1
+    currentChar = exDefinition.charAt(charPointer)
+  }
+
+    println(exDefinition.substring(0, charPointer))
+
+  }
+
+
+
+  //definition.split(" ")
+
+}*/
