@@ -59,43 +59,53 @@ Array.apply(1, 3, 6, 12)
 "---------"
 print ("Exercise 1. In the Scala REPL, type 3. followed by the Tab key\n" +
   "What methods can be applied?")
-3
+//...
+
 print ("Exercise 2. In the Scala REPL, compute the square root of 3,\n" +
   "and then square that value. By how much does\n" +
   "the result differ from 3? (Hint: The res variables are your friend.")
 pow(sqrt(3), 2)
 print ("Exercise 3. Are the res variables val or var?")
+//* val
 print ("Exercise 4. Scala lets you multiply a string with a number—\n" +
   "try out \"crazy\" * 3 in the REPL. What does this operation do?" +
   "Where can you find it in Scaladoc?")
-"crazy" * 3
+"crazy" * 3 //* It can be found in StringOps
 print ("Exercise 5. What does 10 max 2 mean? In which class is the max\n" +
   "method defined?")
-
 print ("Exercise 6. Using BigInt, compute 2 to the power of 1024.")
-//BigInt(pow(2, 1024))
+BigInt(2).pow(1024)
 print ("Exercise 7. What do you need to import so that you can get a\n" +
   "random prime as probablePrime(100, Random), without any qualifiers\n" +
   "before probablePrime and Random?")
+import util._
+import BigInt._
 print ("Exercise 8. One way to create random file or directory names is\n" +
   "to produce a random BigInt and convert it to base 36, yielding a string\n" +
   "such as \"qsnvbevtomcj38o06kul\". Poke around Scaladoc to find a way of\n" +
   "doing this in Scala.")
+// +++
+
 print ("Exercise 9. How do you get the first character of a string in Scala?\n" +
   "The last character?")
+"abcdefg".head
+"abcdefg".last
+
+
 print ("Exercise 10. What do the take, drop, takeRight, and dropRight string\n" +
   "functions do? What advantage or disadvantage do they have over using substring?")
 
+// drop --> selects all elements except first n ones
+// dropRight --> Selects all elements except last n ones
+// take --> Selects first n elements
+// takeRight --> Selects last n elements
 
 
 
-
-/*
-addExercise(10,
+/*addExercise(10,
   "What do the take, drop, takeRight, and dropRight string" +
   "functions do? What advantage or disadvantage do they have over using substring?"
 )
-
 
 def addExercise(number: Int, exDef: String) = {
   val maxLineCharSize = 60
@@ -105,17 +115,17 @@ def addExercise(number: Int, exDef: String) = {
   var currentChar = exDefinition.charAt(charPointer)
 
 
-  def test(str: String) = new Array[] = {
+  def getSubStrings(str: String) = {
+
+    var words = Array()
 
     while (! currentChar.equals(' ')) {
-    charPointer -= 1
-    currentChar = exDefinition.charAt(charPointer)
+      charPointer -= 1
+      currentChar = exDefinition.charAt(charPointer)
+    }
+
+    words :+ exDefinition.substring(0, charPointer)
   }
-
-    println(exDefinition.substring(0, charPointer))
-
-  }
-
 
 
   //definition.split(" ")
