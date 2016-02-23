@@ -46,5 +46,8 @@ box("Tolis")
 "SECTION 2.11 - Lazy values"
 lazy val words = scala.io.Source.fromFile("/usr/share/dict/words").mkString
 
-
+//Exercise 3
+var p: Unit
+var q: Int = 0
+p = q = 1
 
